@@ -1,0 +1,332 @@
+
+/* Login Page CSS */
+
+
+.bg-login-page {
+     -fx-background-color: linear-gradient(to bottom, #e66465 20%, #9198e5 80%);
+     }
+
+.bg-bmsinfo {
+-fx-background-color: rgb(255, 255, 255);
+}
+
+.bg-welcome-offer {
+     -fx-background-color: linear-gradient(to right, #FBDA61 0%, #FF5ACD 90%);
+     -fx-font-family: appleGothic;
+     -fx-font-size: 20pt;
+     -fx-line-spacing: 4pt;
+     -fx-text-fill: rgb(255, 255, 255);
+
+     }
+
+.login-btn {
+     -fx-background-color: rgb(0, 0, 0);
+     -fx-text-fill: rgb(255, 255, 255);
+     -fx-border-radius: 14pt;
+     -fx-border-width: 7px;
+     -fx-border-color: rgb(0, 0, 0);
+     -fx-padding: 2pt;
+     -fx-border-insets: -6;
+     -fx-font-size: 10pt;
+
+}
+.login-btn: hover {
+     -fx-background-color: rgb(255,255,255);
+     -fx-opacity: 0.5;
+     -fx-border-color: rgb(255, 255, 255);
+     -fx-text-fill: rgb(0, 0, 0);
+     }
+
+.textarea {
+-fx-background-color: transparent;
+-fx-text-inner-color: #fff;
+-fx-border-width: 0px 0 px 0.4px 0px;
+
+}
+
+.textarea: focused {
+-fx-border-width: 0px 0px 3px 0px;
+-fx-border-color: rgb(255, 255, 255);
+}
+
+.bonuslabel-dsc {
+-fx-background-color: rgb(0, 0, 0);
+-fx-text-fill: rgb(0, 255, 0);
+-fx-text-alignment: center;
+}
+
+.bonuslabel-rmd {
+-fx-background-color: rgb(0, 0, 0);
+-fx-text-fill: rgb(255, 165, 0);
+-fx-text-alignment: center;
+}
+
+.bonuslabel-dsc: hover {
+-fx-text-fill: rgb(66,135,245);
+
+}
+
+.bonuslabel-rmd: hover {
+-fx-background-color: rgb(0, 0, 0);
+-fx-text-fill: rgb(255,0,0);
+
+}
+
+.hyperlink {
+-fx-text-fill: cyan;
+-fx-underline: false;
+}
+
+.hyperlink: hover {
+-fx-underline: true;
+}
+
+.close-btn{
+
+     -fx-border-width: 9px;
+     -fx-font-size: 12px;
+}
+
+.mini-btn{
+
+     -fx-border-width: 9px;
+     -fx-font-size: 12px;
+
+}
+
+.close-btn: hover{
+-fx-border-width: 4px;
+-fx-opacity: 0.5;
+-fx-border-color: rgb(255, 0, 0);
+}
+
+.mini-btn: hover {
+-fx-border-width: 4px;
+-fx-opacity: 0.5;
+-fx-border-color: rgb(0, 255, 0);
+}
+
+.book {
+-fx-text-fill: rgb(0, 0, 0);
+-fx-font-family: appleGothic;
+-fx-font-size: 30pt;
+}
+
+.my {
+-fx-text-fill: rgb(255, 255, 255);
+-fx-background-color: rgb(255, 0, 0);
+-fx-font-family: appleGothic;
+-fx-font-size: 30pt;
+}
+
+.show {
+-fx-text-fill: rgb(0, 0, 0);
+-fx-font-family: appleGothic;
+-fx-font-size: 30pt;
+}
+
+/* Booking page CSS */
+
+
+.bms-checkout {
+-fx-background-color: white;
+-fx-border-color: linear-gradient(to bottom right, #FF99AC, #FF6A88 70%, #f78fe3, #9ecbf7 25%);
+-fx-border-width: 7px;
+-fx-border-color: linear-gradient(to bottom left, #ffffff, #f4826f);
+}
+
+.bms-acc-name {
+-fx-border-color: linear-gradient(to bottom left, #ffffff, #f4826f);
+-fx-border-width: 4px;
+-fx-border-radius: 5pt;
+-fx-background-color: #000000;
+-fx-text-fill: #FFFFFF;
+-fx-padding: 2pt;
+-fx-border-insets: -3;
+-fx-font-family: appleGothic;
+-fx-font-size: 12pt;
+}
+
+.bms-scs {
+-fx-border-color: linear-gradient(to bottom left, #ffffff, #f4826f);
+-fx-border-width: 4px;
+-fx-border-radius: 5pt;
+-fx-background-color: #000000;
+-fx-text-fill: #FFFFFF;
+-fx-padding: 2pt;
+-fx-border-insets: -3;
+-fx-font-family: appleGothic;
+-fx-font-size: 12pt;
+}
+
+.bms-scs: hover {
+-fx-opacity: 0.7;
+-fx-border-color: #9ecbf7;
+-fx-background-color: rgb(255,255,255);
+-fx-text-fill: rgb(0,0,0);
+}
+
+.bms-acc-name: hover {
+-fx-opacity: 0.7;
+-fx-border-color: #9ecbf7;
+-fx-background-color: rgb(255,255,255);
+-fx-text-fill: rgb(0,0,0);
+}
+
+.bms-header {
+-fx-border-width: 7px;
+-fx-border-color: linear-gradient(to bottom right, #9ecbf7 25%, #f785e1, #FF6A88 70%, #FF99AC);
+}
+
+.bms-scroll {
+-fx-border-width: 3px;
+-fx-border-color: linear-gradient(to bottom left, #9ecbf7 25%, #f785e1, #FF6A88 70%, #FF99AC);
+}
+.bms-widget{
+-fx-background-color: #fff;
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8,0,0,0);
+-fx-background-radius: 8px;
+}
+
+/* .bms-widget: hover {
+-fx-effect: dropshadow(three-pass-box, rgba(1,226,252,100), 8,0,0,0);
+} */
+
+.movies{
+-fx-background-color: linear-gradient(to bottom right, #befffc, #f27baa);
+}
+
+.checkout-btn{
+-fx-border-color: #7bf28d;
+-fx-border-width: 7px;
+-fx-border-radius: 10px;
+-fx-background-color: #ffffff;
+-fx-text-fill: #000000;
+-fx-font-family: appleGothic;
+-fx-font-size: 18px;
+-fx-padding: 2pt;
+-fx-border-insets: -6;
+}
+
+.total-btn {
+-fx-border-color: transparent;
+-fx-border-width: 7px;
+-fx-border-radius: 10px;
+-fx-background-color: #ffffff);
+-fx-text-fill: #000000;
+-fx-font-family: appleGothic;
+-fx-font-size: 18px;
+-fx-padding: 2pt;
+-fx-border-insets: -6;
+}
+
+.checkout-btn: hover{
+-fx-background-color: #000000;
+-fx-text-fill: #ffffff;
+}
+
+.promo{
+-fx-background-color: transparent;
+-fx-text-inner-color: #fff;
+-fx-border-width: 0px 5px 3px 2px;
+
+}
+
+.promo: focused {
+-fx-border-width: 0px 0px 3px 0px;
+-fx-border-color: #fb282d;
+}
+
+.apply-btn {
+-fx-border-color: #d989f6;
+-fx-border-width: 6px;
+-fx-border-radius: 10px;
+-fx-background-color: #ffffff;
+-fx-text-fill: #000000;
+-fx-font-family: appleGothic;
+-fx-font-size: 18px;
+-fx-padding: 2pt;
+-fx-border-insets: -6;
+}
+
+.apply-btn: hover{
+-fx-background-color: rgb(128,128,128);
+-fx-text-fill: #ffffff;
+}
+
+.logout-btn {
+-fx-border-color: #000000;
+-fx-border-width: 5px;
+-fx-border-radius: 5pt;
+-fx-background-color: #000000;
+-fx-text-fill: #FFFFFF;
+-fx-padding: 2pt;
+-fx-border-insets: -3;
+-fx-font-family: appleGothic;
+-fx-font-size: 12pt;
+}
+
+
+.logout-btn: hover{
+-fx-background-color: rgb(255,255,255);
+-fx-border-color: #8fdff9;
+-fx-text-fill: #000000;
+}
+
+.movies-widget{
+-fx-background-color: #fff;
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 8,0,0,0);
+-fx-background-radius: 8px;
+}
+
+.movies-widget: hover {
+-fx-effect: dropshadow(three-pass-box, rgba(246,7,251,100), 8,0,0,0);
+}
+
+.add-to-cart{
+-fx-background-color: rgb(255,255,255);
+-fx-text-fill: rgb(0,0,0);
+-fx-background-radius: 8px;
+}
+
+.add-to-cart: hover {
+-fx-background-color: rgb(0,0,0);
+-fx-text-fill: rgb(255,255,255);
+}
+
+.movie-spinner {
+-fx-border-color: linear-gradient(to bottom left, #ffffff, #f4826f);
+-fx-border-width: 4px;
+-fx-border-radius: 5pt;
+-fx-background-color: #000000;
+-fx-text-fill: #FFFFFF;
+-fx-padding: 2pt;
+-fx-border-insets: -3;
+-fx-font-family: appleGothic;
+-fx-font-size: 12pt;
+}
+
+.name-label {
+-fx-border-color: transparent;
+-fx-border-width: 7px;
+-fx-border-radius: 10px;
+-fx-background-color: #ffffff);
+-fx-text-fill: #000000;
+-fx-font-family: appleGothic;
+-fx-font-size: 14px;
+-fx-padding: 2pt;
+-fx-border-insets: -6;
+}
+
+.bms-landing{
+-fx-background-color: linear-gradient(to right, #fefefe 0%, #e7c3f4 90%);
+}
+
+.bms-landing2 {
+-fx-font-size: 24px;
+-fx-font-family: appleGothic;
+-fx-text-fill: #000000;
+-fx-background-color: linear-gradient(to right, #e7c3f4 0%, #fefefe 90%);
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 8,0,0,0);
+-fx-background-radius: 8px;
+}

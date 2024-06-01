@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginApp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectb.HelloController">
+   <children>
+      <AnchorPane fx:id="bmsinfo" layoutX="250.0" prefHeight="650.0" prefWidth="600.0" styleClass="bg-bmsinfo" stylesheets="@../../../../java/com/example/projectb/loginpage.css" visible="false">
+         <children>
+            <Label fx:id="welcomebms" alignment="CENTER" layoutY="239.0" prefHeight="300.0" prefWidth="610.0" style="-fx-padding: 20;" styleClass="bg-welcome-offer" text="Welcome to BookMyShow. To book movie tickets or any other shows, please Sign in to the portal and get 20% discount on any bookings." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="discountrmd" alignment="CENTER" layoutY="572.0" prefHeight="40.0" prefWidth="610.0" styleClass="bonuslabel-rmd" text="---- Do not forget to use PROMO CODE at the check out ----" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="discount" alignment="CENTER" contentDisplay="CENTER" layoutY="163.0" prefHeight="50.0" prefWidth="610.0" styleClass="bonuslabel-dsc" text="&lt;&lt;&lt;&lt;&lt;   WELCOME20   &gt;&gt;&gt;&gt;&gt;" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="128.0" fitWidth="325.0" layoutX="142.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/bms-logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signuppage" prefHeight="650.0" prefWidth="250.0" styleClass="bg-login-page" stylesheets="@../../../../java/com/example/projectb/loginpage.css" visible="false">
+         <children>
+            <Label fx:id="signin_label1" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="45.0" prefHeight="70.0" prefWidth="150.0" text="Sign Up">
+               <font>
+                  <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signin_username1" layoutX="17.0" layoutY="270.0" onAction="#signin" prefHeight="30.0" prefWidth="200.0" promptText="Username" styleClass="textarea" />
+            <PasswordField fx:id="signin_password1" layoutX="18.0" layoutY="350.0" onAction="#signin" prefHeight="30.0" prefWidth="200.0" promptText="Password" styleClass="textarea" />
+            <Button fx:id="signin_btn1" alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="421.0" mnemonicParsing="false" onAction="#signin" prefHeight="39.0" prefWidth="84.0" styleClass="login-btn" text="Sign Up" textAlignment="CENTER" />
+            <Hyperlink fx:id="signup_link" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="545.0" onAction="#switchPages" prefHeight="24.0" prefWidth="192.5" text="Already have an account?" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="signin_mini1" layoutX="50.0" layoutY="623.0" maxHeight="39.0" maxWidth="50.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#signup_mini" prefHeight="27.0" prefWidth="50.0" style="-fx-background-color: black; -fx-text-fill: lime;" styleClass="mini-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="--" textFill="#04eb2b" />
+            <Button fx:id="signin_close1" layoutY="623.0" maxHeight="39.0" maxWidth="50.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#signin_close" prefHeight="27.0" prefWidth="50.0" style="-fx-background-color: black; -fx-text-fill: Red;" styleClass="close-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="X" textFill="#f20404" />
+            <TextField fx:id="signup_email" layoutX="17.0" layoutY="190.0" prefHeight="30.0" prefWidth="200.0" promptText="Email Address" styleClass="textarea" />
+            <Button fx:id="to_bp_from_signup" alignment="CENTER" layoutX="22.0" layoutY="489.0" mnemonicParsing="false" onAction="#switchingToBookingPage" prefHeight="40.0" prefWidth="200.0" styleClass="login-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="To Booking Page" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signinpage" prefHeight="650.0" prefWidth="250.0" styleClass="bg-login-page" stylesheets="@../../../../java/com/example/projectb/loginpage.css" visible="false">
+         <children>
+            <Label fx:id="signin_label" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="45.0" prefHeight="70.0" prefWidth="150.0" text="LOGIN">
+               <font>
+                  <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signin_username" layoutX="17.0" layoutY="270.0" onAction="#signin" prefHeight="30.0" prefWidth="200.0" promptText="Username" styleClass="textarea" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+            <PasswordField fx:id="signin_password" layoutX="18.0" layoutY="350.0" onAction="#signin" prefHeight="30.0" prefWidth="200.0" promptText="Password" styleClass="textarea" />
+            <Button fx:id="signin_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="421.0" mnemonicParsing="false" onAction="#signin" prefHeight="39.0" prefWidth="84.0" styleClass="login-btn" text="LOGIN" textAlignment="CENTER" />
+            <Hyperlink fx:id="signin_link" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="545.0" onAction="#switchPages" text="You don't have an account yet?" wrapText="true" />
+            <Button fx:id="signin_mini" layoutX="50.0" layoutY="623.0" maxHeight="39.0" maxWidth="50.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#signin_mini" prefHeight="27.0" prefWidth="50.0" style="-fx-background-color: black; -fx-text-fill: lime;" styleClass="mini-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="--" textFill="#04eb2b" />
+            <Button fx:id="signin_close" layoutY="623.0" maxHeight="39.0" maxWidth="50.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#signup_close" prefHeight="27.0" prefWidth="50.0" style="-fx-background-color: black; -fx-text-fill: Red;" styleClass="close-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="X" textFill="#f20404" />
+            <Button fx:id="to_bp_from_login" alignment="CENTER" layoutX="22.0" layoutY="489.0" mnemonicParsing="false" onAction="#switchingToBookingPage" prefHeight="40.0" prefWidth="200.0" styleClass="login-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="To Booking Page" wrapText="true" />
+         </children>
+      </AnchorPane>
+     <AnchorPane fx:id="bms_bookingPage" prefHeight="650.0" prefWidth="850.0">
+<children>
+   <BorderPane layoutX="306.0" layoutY="42.0" prefHeight="650.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <top>
+         <AnchorPane fx:id="bp_header" prefHeight="80.0" prefWidth="850.0" styleClass="bms-header" stylesheets="@../../../../java/com/example/projectb/loginpage.css" BorderPane.alignment="CENTER">
+            <children>
+               <Button fx:id="movies_btn" layoutX="254.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToMovies" prefHeight="35.0" prefWidth="135.0" styleClass="bms-acc-name" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Movies" />
+               <Button fx:id="standup_btn" layoutX="402.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToMovies" prefHeight="35.0" prefWidth="135.0" styleClass="bms-scs" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Stand-up Shows" />
+               <Button fx:id="opera_btn" layoutX="552.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToMovies" prefHeight="35.0" prefWidth="135.0" styleClass="bms-acc-name" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Sports" />
+               <Button fx:id="webseries_btn" layoutX="701.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToMovies" prefHeight="35.0" prefWidth="135.0" styleClass="bms-acc-name" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Web Series" />
+               <ImageView fitHeight="60.0" fitWidth="223.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../assets/bms-logo.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </AnchorPane>
+      </top>
+      <left>
+         <AnchorPane fx:id="bp_checkout" prefHeight="570.0" prefWidth="250.0" styleClass="bms-checkout" stylesheets="@../../../../java/com/example/projectb/loginpage.css" BorderPane.alignment="CENTER">
+            <children>
+               <Button fx:id="bms_logout_btn" layoutX="67.0" layoutY="503.0" mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="117.0" styleClass="logout-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Log Out   |&gt;" />
+               <Button fx:id="checkout_btn" layoutX="128.0" layoutY="424.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="50.0" prefWidth="99.0" styleClass="checkout-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Buy" />
+               <Label layoutX="25.0" layoutY="365.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="TOTAL      :" />
+               <Label alignment="CENTER" layoutX="25.0" layoutY="22.0" prefHeight="34.0" prefWidth="193.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Hey, Krupen" />
+               <TextField fx:id="bms_promocode" layoutX="19.0" layoutY="85.0" prefHeight="30.0" prefWidth="133.0" promptText="Promo Code" styleClass="promo" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+               <Button fx:id="bms_apply_btn" layoutX="170.0" layoutY="82.0" mnemonicParsing="false" onAction="#promocode" styleClass="apply-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Apply" />
+               <Label fx:id="total" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="365.0" prefHeight="34.0" prefWidth="46.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="00" />
+               <Label layoutX="159.0" layoutY="365.0" prefHeight="34.0" prefWidth="23.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="€" />
+               <Label layoutX="25.0" layoutY="290.0" prefHeight="40.0" prefWidth="116.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Items         :" />
+               <Label fx:id="item_total" alignment="CENTER_RIGHT" layoutX="149.0" layoutY="290.0" prefHeight="40.0" prefWidth="84.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="00" />
+                        <Button fx:id="clear_cart" alignment="CENTER" layoutX="22.0" layoutY="424.0" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="76.0" styleClass="checkout-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Clear" textAlignment="CENTER" />
+            </children>
+         </AnchorPane>
+      </left>
+      <center>
+         <AnchorPane fx:id="bp_general" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                        <AnchorPane fx:id="bms_movies_scrollpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0" visible="false">
+                           <children>
+                     <ScrollPane layoutX="52.0" layoutY="85.0" prefHeight="418.0" prefWidth="507.0" styleClass="bms-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                        <content>
+                           <HBox prefHeight="400.0" prefWidth="1358.0">
+                              <children>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/RRR.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="87.0" layoutY="214.0" text="RRR" />
+                                       <Button fx:id="atc0" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner0" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue0" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <padding>
+                                       <Insets right="10.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets left="30.0" right="30.0" top="50.0" />
+                                    </HBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="220.0" fitWidth="150.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/KALKI2898AD.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="62.0" layoutY="214.0" text="KALKI 2989 AD" />
+                                       <Button fx:id="atc1" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner1" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue1" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets right="30.0" top="50.0" />
+                                    </HBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="172.0" fitWidth="200.0" layoutX="1.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/Brahmastra.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Brahmastra" />
+                                       <Button fx:id="atc2" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner2" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue2" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets right="30.0" top="50.0" />
+                                    </HBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="216.0" fitWidth="150.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/OG.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="75.0" layoutY="214.0" text="OG" />
+                                       <Button fx:id="atc3" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner3" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue3" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets right="30.0" top="50.0" />
+                                    </HBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/Baahubali2.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="55.0" layoutY="214.0" text="Baahubali 2" />
+                                       <Button fx:id="atc4" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner4" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue4" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets right="30.0" top="50.0" />
+                                    </HBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="38.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/Bagheera.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Bagheera" />
+                                       <Button fx:id="atc5" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner5" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue5" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets right="30.0" top="50.0" />
+                                    </HBox.margin>
+                                 </AnchorPane>
+                              </children>
+                           </HBox>
+                        </content>
+                     </ScrollPane>
+                     <AnchorPane fx:id="bms_movies_lattest" layoutX="52.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="135.0">
+                        <children>
+                           <Label layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="133.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Lattest movies" />
+                        </children>
+                     </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="bms_web_scrollpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0" visible="false">
+                           <children>
+                     <ScrollPane layoutX="310.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="261.0" styleClass="bms-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                        <content>
+                           <VBox prefHeight="200.0" prefWidth="100.0">
+                              <children>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="210.0" fitWidth="165.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/rocketboys.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Rocket Boys" />
+                                       <Button fx:id="atc21" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner21" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue2" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" top="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="37.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/farzi.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="87.0" layoutY="214.0" text="Farzi" />
+                                       <Button fx:id="atc01" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner01" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue0" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="220.0" fitWidth="150.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/asur2.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="62.0" layoutY="214.0" text="Asur 2" />
+                                       <Button fx:id="atc11" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner11" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue1" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="216.0" fitWidth="150.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/familyman.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="75.0" layoutY="214.0" text="The Family Man" />
+                                       <Button fx:id="atc31" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner31" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue3" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/kotafactory.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="55.0" layoutY="214.0" text="Kota Factory" />
+                                       <Button fx:id="atc41" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner41" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue4" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="38.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/panchayat.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Panchayat" />
+                                       <Button fx:id="atc51" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner51" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue5" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                              </children>
+                           </VBox>
+                        </content>
+                     </ScrollPane>
+                     <Label fx:id="bms_web_nr" layoutX="20.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="157.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="New Releases" />
+                     <ScrollPane layoutX="20.0" layoutY="87.0" prefHeight="406.0" prefWidth="261.0" styleClass="bms-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                        <content>
+                           <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1927.0" prefWidth="226.0">
+                              <children>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="210.0" fitWidth="165.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/rocketboys.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Rocket Boys" />
+                                       <Button fx:id="atc211" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner211" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue2" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" top="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="37.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/farzi.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="87.0" layoutY="214.0" text="Farzi" />
+                                       <Button fx:id="atc011" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner011" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue0" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="220.0" fitWidth="150.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/asur2.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="62.0" layoutY="214.0" text="Asur 2" />
+                                       <Button fx:id="atc111" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner111" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue1" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="216.0" fitWidth="150.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/familyman.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="75.0" layoutY="214.0" text="The Family Man" />
+                                       <Button fx:id="atc311" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner311" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue3" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/kotafactory.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="55.0" layoutY="214.0" text="Kota Factory" />
+                                       <Button fx:id="atc411" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner411" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue4" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                    <children>
+                                       <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="38.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../assets/webseries/panchayat.jpg" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Panchayat" />
+                                       <Button fx:id="atc511" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                       <Spinner fx:id="cartSpinner511" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue5" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets bottom="25.0" left="25.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                              </children>
+                           </VBox>
+                        </content>
+                     </ScrollPane>
+                     <Label fx:id="bms_web_atf" layoutX="310.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="157.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="All time Favourite" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="bookingLanding" layoutX="-5.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="605.0" styleClass="bms-landing" stylesheets="@../../../../java/com/example/projectb/loginpage.css" visible="false">
+                           <children>
+                              <Label layoutX="93.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="419.0" styleClass="bms-landing2" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Hey there, You can now book your favourite IPL match Ticket with BookMyShow and get 20% Discount using WELCOME20 code. Hurry up !!!" textAlignment="CENTER" wrapText="true" />
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="bms_standup_scrollpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0" visible="false">
+                           <children>
+                              <ScrollPane layoutX="53.0" layoutY="83.0" prefHeight="418.0" prefWidth="507.0" styleClass="bms-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                 <content>
+                                    <HBox prefHeight="400.0" prefWidth="1358.0">
+                                       <children>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="291.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="170.0" fitWidth="288.0" layoutX="20.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                   <image>
+                                                      <Image url="@../../../assets/Standup/Akash.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="112.0" layoutY="210.0" styleClass="name-label" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Akash Gupta" />
+                                                <Button fx:id="atc02" layoutX="42.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner02" layoutX="196.0" layoutY="242.0" onMouseClicked="#spinnerValue0" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets left="30.0" right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="291.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="170.0" fitWidth="288.0" layoutX="1.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                   <image>
+                                                      <Image url="@../../../assets/Standup/Vipul.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="115.0" layoutY="210.0" styleClass="name-label" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Vipul Goyal" />
+                                                <Button fx:id="atc12" layoutX="42.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner12" layoutX="196.0" layoutY="242.0" onMouseClicked="#spinnerValue1" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="291.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="170.0" fitWidth="288.0" layoutX="13.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/Standup/Zakir.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="115.0" layoutY="218.0" styleClass="name-label" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Zakir Khan" />
+                                                <Button fx:id="atc22" layoutX="42.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner22" layoutX="196.0" layoutY="242.0" onMouseClicked="#spinnerValue2" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="291.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="170.0" fitWidth="288.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/Standup/Ravi.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="115.0" layoutY="214.0" styleClass="name-label" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Ravi Gupta" />
+                                                <Button fx:id="atc32" layoutX="42.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner32" layoutX="196.0" layoutY="242.0" onMouseClicked="#spinnerValue3" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="291.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="170.0" fitWidth="288.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/Standup/Abhishek.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="80.0" layoutY="214.0" styleClass="name-label" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Abhishek Upmanyu" />
+                                                <Button fx:id="atc42" layoutX="42.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner42" layoutX="196.0" layoutY="242.0" onMouseClicked="#spinnerValue4" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="291.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="170.0" fitWidth="288.0" layoutX="1.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/Standup/Bassi.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="100.0" layoutY="200.0" styleClass="name-label" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Anubhav Bassi" />
+                                                <Button fx:id="atc52" layoutX="42.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner52" layoutX="196.0" layoutY="242.0" onMouseClicked="#spinnerValue5" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="53.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="193.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Stand-up Comedy" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="bms_sports_scrollpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0">
+                           <children>
+                              <ScrollPane layoutX="52.0" layoutY="85.0" prefHeight="418.0" prefWidth="507.0" styleClass="bms-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                 <content>
+                                    <HBox prefHeight="400.0" prefWidth="800.0">
+                                       <children>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/sports/RR.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="25.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Rajasthan Royals" />
+                                                <Button fx:id="atc03" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner03" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue0" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets left="30.0" right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/sports/MIvsLSG.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="28.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Mumbai vs Lucknow" />
+                                                <Button fx:id="atc13" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner13" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue1" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="201.0" styleClass="movies-widget" stylesheets="@../../../../java/com/example/projectb/loginpage.css">
+                                             <children>
+                                                <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../assets/sports/RRvsKXIP.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="25.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Rajasthan vs Punjab" />
+                                                <Button fx:id="atc23" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
+                                                <Spinner fx:id="cartSpinner23" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue2" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" top="50.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="bms_movies_lattest1" layoutX="52.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="214.0">
+                                 <children>
+                                    <Label layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="241.0" styleClass="total-btn" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Upcoming cricket matches" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+            </children>
+         </AnchorPane>
+      </center>
+   </BorderPane>
+</children>
+</AnchorPane>
+        </children>
+        </AnchorPane>
