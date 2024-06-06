@@ -331,10 +331,10 @@
                                     <children>
                                        <ImageView fitHeight="210.0" fitWidth="165.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../../assets/webseries/rocketboys.jpg" />
+                                             <Image url="@../../../assets/webseries/ipf.jpg" />
                                           </image>
                                        </ImageView>
-                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Rocket Boys" />
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Indian Police Force" />
                                        <Button fx:id="atc211" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
                                        <Spinner fx:id="cartSpinner211" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue2" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
                                     </children>
@@ -346,10 +346,10 @@
                                     <children>
                                        <ImageView fitHeight="210.0" fitWidth="150.0" layoutX="37.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../../assets/webseries/farzi.jpg" />
+                                             <Image url="@../../../assets/webseries/insideedge.jpg" />
                                           </image>
                                        </ImageView>
-                                       <Label alignment="CENTER" layoutX="87.0" layoutY="214.0" text="Farzi" />
+                                       <Label alignment="CENTER" layoutX="87.0" layoutY="214.0" text="Inside Edge" />
                                        <Button fx:id="atc011" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
                                        <Spinner fx:id="cartSpinner011" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue0" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
                                     </children>
@@ -361,10 +361,10 @@
                                     <children>
                                        <ImageView fitHeight="220.0" fitWidth="150.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../../assets/webseries/asur2.jpg" />
+                                             <Image url="@../../../assets/webseries/specialops.jpg" />
                                           </image>
                                        </ImageView>
-                                       <Label alignment="CENTER" layoutX="62.0" layoutY="214.0" text="Asur 2" />
+                                       <Label alignment="CENTER" layoutX="62.0" layoutY="214.0" text="Special OPS" />
                                        <Button fx:id="atc111" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
                                        <Spinner fx:id="cartSpinner111" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue1" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
                                     </children>
@@ -376,10 +376,10 @@
                                     <children>
                                        <ImageView fitHeight="216.0" fitWidth="150.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../../assets/webseries/familyman.jpg" />
+                                             <Image url="@../../../assets/webseries/aspirants.jpg" />
                                           </image>
                                        </ImageView>
-                                       <Label alignment="CENTER" layoutX="75.0" layoutY="214.0" text="The Family Man" />
+                                       <Label alignment="CENTER" layoutX="75.0" layoutY="214.0" text="Aspirants" />
                                        <Button fx:id="atc311" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
                                        <Spinner fx:id="cartSpinner311" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue3" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
                                     </children>
@@ -391,10 +391,10 @@
                                     <children>
                                        <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../../assets/webseries/kotafactory.jpg" />
+                                             <Image url="@../../../assets/webseries/khakee.jpg" />
                                           </image>
                                        </ImageView>
-                                       <Label alignment="CENTER" layoutX="55.0" layoutY="214.0" text="Kota Factory" />
+                                       <Label alignment="CENTER" layoutX="55.0" layoutY="214.0" text="Khakee" />
                                        <Button fx:id="atc411" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
                                        <Spinner fx:id="cartSpinner411" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue4" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
                                     </children>
@@ -406,10 +406,10 @@
                                     <children>
                                        <ImageView fitHeight="190.0" fitWidth="179.0" layoutX="38.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../../assets/webseries/panchayat.jpg" />
+                                             <Image url="@../../../assets/webseries/pitchers.jpg" />
                                           </image>
                                        </ImageView>
-                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Panchayat" />
+                                       <Label alignment="CENTER" layoutX="60.0" layoutY="214.0" text="Pitchers" />
                                        <Button fx:id="atc511" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#totalAmount" prefHeight="30.0" prefWidth="90.0" styleClass="add-to-cart" stylesheets="@../../../../java/com/example/projectb/loginpage.css" text="Add to cart" />
                                        <Spinner fx:id="cartSpinner511" layoutX="124.0" layoutY="241.0" onMouseClicked="#spinnerValue5" prefHeight="41.0" prefWidth="63.0" styleClass="movie-spinner" stylesheets="@../../../../java/com/example/projectb/loginpage.css" />
                                     </children>
